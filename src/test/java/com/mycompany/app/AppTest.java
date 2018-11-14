@@ -31,7 +31,6 @@ public class AppTest {
 		final OperatingSystem currentOperatingSystem = OperatingSystem.getCurrentOperatingSystem();
         String pathWebdriver = String.format("src/test/resources/drivers/%s/googlechrome/%s/chromedriver%s", currentOperatingSystem.getOperatingSystemDir(),
                 SystemArchitecture.getCurrentSystemArchitecture().getSystemArchitectureName(), currentOperatingSystem.getSuffixBinary());
-
         if (!new File(pathWebdriver).setExecutable(true)) {
             logger.error("ERROR when change setExecutable on " + pathWebdriver);
         }
@@ -46,8 +45,9 @@ public class AppTest {
 	
 	@Test
 	public void read() {
+		// YOU NEED run your app on localhost:8080
 		webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		webDriver.get("http://localhost:8080/landigger/api/search?mac=cc:f8:e9:aa:29:04");
+		webDriver.get("http://localhost:8080/app/login");
 		logger.info(webDriver.getPageSource());
 	}
 }
