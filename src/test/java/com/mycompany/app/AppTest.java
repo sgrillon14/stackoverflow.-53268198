@@ -6,10 +6,13 @@ import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.github.noraui.utils.Utilities.OperatingSystem;
 import com.github.noraui.utils.Utilities.SystemArchitecture;
@@ -17,6 +20,8 @@ import com.github.noraui.utils.Utilities.SystemArchitecture;
 /**
  * Unit test for https://stackoverflow.com/questions/53268198/how-to-make-webapp-run-on-travis-ci.
  */
+@RunWith(SpringRunner.class)
+@SpringBootTest()
 public class AppTest {
 	
 	/**
