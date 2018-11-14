@@ -51,7 +51,8 @@ public class AppTest {
 	@Test
 	public void read() {
 		webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		webDriver.get("http://127.0.0.1:8080/app/login");
+		//webDriver.get("http://127.0.0.1:8080/app/login");
+		webDriver.get("https://www.google.com");
 		logger.info(webDriver.getPageSource());
 	}
 }
