@@ -50,9 +50,8 @@ public class AppTest {
 	
 	@Test
 	public void read() {
-		// YOU NEED run your app on localhost:8080
 		webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		webDriver.get("http://localhost:8080/app/login");
+		webDriver.get("http://127.0.0.1:8080/app/login");
 		logger.info(webDriver.getPageSource());
 	}
 }
